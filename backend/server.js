@@ -19,7 +19,13 @@ app.get("/produtos", (req, res) => {
 })
 
 app.post("/produtos", (req, res) => {
-    
+    const produto = req.body.produto    
+
+    produtos.push({
+        produto: produto 
+    })
+
+    res.json({mensagem: "tarefa criada"})
 })
 
 //fznd o server escutar a porta 3000
