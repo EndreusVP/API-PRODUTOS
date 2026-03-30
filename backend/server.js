@@ -19,13 +19,26 @@ app.get("/produtos", (req, res) => {
 })
 
 app.post("/produtos", (req, res) => {
-    const produto = req.body.produto    
+    const produto = req.body.produto
+    const categoria = req.body.categoria
+    const preco = req.body.preco    
 
     produtos.push({
-        produto: produto 
+        id: Date.now(),
+        produto: produto,
+        categoria: categoria,
+        preco: preco 
     })
 
-    res.json({mensagem: "tarefa criada"})
+    res.json({mensagem: "Produto criado"})
+})
+
+app.deletar("/produtos/:id", (req, res) => {
+    let id = req.parems.id
+
+    produtos = produtos.filter(p => p.id != id)
+
+    res.json({mensagem: "tarefa removida"})
 })
 
 //fznd o server escutar a porta 3000
