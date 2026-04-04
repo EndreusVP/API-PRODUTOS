@@ -33,12 +33,12 @@ app.post("/produtos", (req, res) => {
     res.json({mensagem: "Produto criado"})
 })
 
-app.deletar("/produtos/:id", (req, res) => {
-    let id = req.parems.id
+app.delete("/produtos/:id", (req, res) => {
+    let id = Number(req.params.id)
 
     produtos = produtos.filter(p => p.id != id)
 
-    res.json({mensagem: "tarefa removida"})
+    res.json({mensagem: "produto removida"})
 })
 
 //fznd o server escutar a porta 3000
