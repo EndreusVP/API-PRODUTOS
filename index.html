@@ -6,11 +6,37 @@
     <title>API PRODUTOS</title>
 </head>
 <body>
-    <input type="text" id="nome">
-    <input type="text" id="categoria">
-    <input type="text" id="preco">
-    <button onclick="add()">add</button>
+    <section class="totais">
+        <div class="total-produtos">
+            <h2>Total Produtos</h2>
+            <p id="totalProdutos"></p>
+        </div>
+        <div class="valor-total">
+            <h2>Valor Total</h2>
+            <p id="valorTotal"></p>
+        </div>
+        <div class="categoria">
+            <h2>Categorias</h2>
+            <pi id="categorias"></p>
+        </div>
+    </section>
 
+    <section class="novo-produto">
+        <input type="text" id="nome" placeholder="Produto">
+        <input type="text" id="categoria" placeholder="Categoria">
+        <input type="text" id="preco" placeholder="Preço">
+        <button onclick="add()">add</button>
+    </section>
+
+    <section class="filtros">
+
+    </section>
+
+    <section class="lista-produtos">
+        <h2>Lista de Produtos</h2>
+        <ul id="lista"></ul>    
+    </section>
+    
     <script src="frontend/script.js"></script>
 </body>
 </html>

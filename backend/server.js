@@ -28,7 +28,7 @@ app.post("/produtos", (req, res) => {
         id: Date.now(),
         produto: produto,
         categoria: categoria,
-        preco: preco 
+        preco: Number(preco) 
     })
 
     res.json({mensagem: "Produto criado"})
