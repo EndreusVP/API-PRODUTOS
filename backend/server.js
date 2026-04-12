@@ -1,11 +1,12 @@
 //importar express
 const express =  require("express")
+const cors = require("cors")
 
 const app = express()
 
 //transforma json em js
 app.use(express.json())
-
+app.use(cors())
 //lista de produtos
 let produtos = []
 
