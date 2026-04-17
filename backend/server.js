@@ -19,16 +19,32 @@ app.get("/produtos", (req, res) => {
     res.json(produtos)
 })
 
+//contando o total de produtos
+app.get("/produtos/total", (req, res) => {
+    res.json(produtos.length)
+})
+
+//pegando o valor total dos produtos
+app.get("/produtos/valortotal", (req, res) => {
+    let valorTotal = 0
+    
+    produtos.forEach(produto => {
+        valorTotal += produto.preco
+    })
+
+    res.json(valorTotal)
+})
+
 app.post("/produtos", (req, res) => {
     const produto = req.body.produto
     const categoria = req.body.categoria
-    const preco = req.body.preco    
+    const preco = Number(req.body.preco)  
 
     produtos.push({
         id: Date.now(),
         produto: produto,
         categoria: categoria,
-        preco: Number(preco) 
+        preco: preco 
     })
 
     res.json({mensagem: "Produto criado"})
