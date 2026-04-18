@@ -35,6 +35,12 @@ app.get("/produtos/valortotal", (req, res) => {
     res.json(valorTotal)
 })
 
+app.get("/produtos/totalcategoria", (req, res) => {
+    let totalCategora = new set(produtos.map(p => p.categoria)).size
+
+    res.json(totalCategora)
+})
+
 app.post("/produtos", (req, res) => {
     const produto = req.body.produto
     const categoria = req.body.categoria

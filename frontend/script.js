@@ -1,6 +1,6 @@
 let nome = window.document.getElementById("nome")
-let categoria = window.document.getElementById("categoria")
-let preco = Number(window.document.getElementById("preco").value)
+let categoria = window.document.getElementById("categorias")
+let preco = window.document.getElementById("preco")
 let lista = window.document.getElementById("lista")
 let totalProdutos = window.document.getElementById("totalProdutos")
 let valorTotal = window.document.getElementById("valorTotal")
@@ -14,7 +14,7 @@ async function add() {
         body: JSON.stringify({ 
             produto: nome.value,
             categoria: categoria.value,
-            preco: preco
+            preco: Number(preco.value)
         })
     })
 
@@ -25,6 +25,7 @@ async function add() {
     listar()
     total()
     valorTotalProdutos()
+    totalCategoria()
 }
 
 async function listar() {
@@ -52,6 +53,7 @@ async function remover(id) {
     listar()
     total()
     valorTotalProdutos()
+    totalCategoria()
 }
 
 async function total() {
@@ -68,7 +70,14 @@ async function valorTotalProdutos() {
     valorTotal.innerHTML = `R$ ${valorTotalProdutos}`
 }
 
+async function totalCategoria() {
+    let resposta = await fetch("http://localhost:3000/produtos/totalcategoria")
+    let totalCategoria =  await resposta.json()
+    categoria.innerHTML = totalCategoria
+}
+
 listar()
 total()
 valorTotalProdutos()
+totalCategoria()
 
