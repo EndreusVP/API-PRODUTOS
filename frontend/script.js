@@ -1,5 +1,5 @@
 let nome = window.document.getElementById("nome")
-let categoria = window.document.getElementById("categorias")
+let categorias = window.document.getElementById("categorias")
 let preco = window.document.getElementById("preco")
 let lista = window.document.getElementById("lista")
 let totalProdutos = window.document.getElementById("totalProdutos")
@@ -73,7 +73,7 @@ async function valorTotalProdutos() {
 async function totalCategoria() {
     let resposta = await fetch("http://localhost:3000/produtos/totalcategoria")
     let totalCategoria =  await resposta.json()
-    categoria.innerHTML = totalCategoria
+    categorias.innerHTML = totalCategoria
 }
 
 listar()

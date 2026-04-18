@@ -36,7 +36,7 @@ app.get("/produtos/valortotal", (req, res) => {
 })
 
 app.get("/produtos/totalcategoria", (req, res) => {
-    let totalCategora = new set(produtos.map(p => p.categoria)).size
+    let totalCategora = new Set(produtos.map(p => p.categoria)).size
 
     res.json(totalCategora)
 })
