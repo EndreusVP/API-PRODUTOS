@@ -1,0 +1,71 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+:root{
+    /*AZUL COR PRINCIPAL*/
+    --azul-principal: #2F6FED; /*header/ botao*/
+    --azul-escuro: #1F4E9E; /*gradiente top*/
+    --azul-medio: #3B82F6;/*crads*/
+
+    /*VERDE CARD TOTAL PRODUTOS*/
+    --verde-principal: #4CAF50;
+    --verde-escuro: #3E8E41;
+    --verde-claro: #66BB6A; /*gradiente*/
+
+    /*LARANJA CATEGORIAS*/
+    --laranja-principal: #F59E0B;
+    --laranja-claro: #FBBF24;
+    --laranja-suave: #FDE68A; /*fundo*/
+
+    /*AZUL FINANCEIRO VALOR TOTAL*/
+    --azul-financeiro: #2563EB;
+    --azul-claro: #60A5FA;
+
+    /*NEUTROS ESTRUTURA*/
+    --fundo-geral: #F5F7FA;
+    --caixa: #FFFFFF;
+    --bordas: #E5E7EB;
+    --divisorias: #D1D5DB;
+
+    /*TEXTOS*/
+    --texto-principal: #1F2937;
+    --texto-secundario: #6B7280;
+    --placeholder: #9CA3AF;
+
+    /*AÇÕES BOTÕES*/
+    --excluir: #EF4444;
+    --hover-excluir: #DC2626;
+    --editar: #3B82F6; /*azul*/
+    --hover-editar: #2563EB;
+
+    /*GRADIENTES*/
+    --header: linear-gradient(135deg, #2F6FED, #1F4E9E);
+    --card-verde: linear-gradient(135deg, #66BB6A, #3E8E41);
+    --card-azul: linear-gradient(135deg, #60A5FA, #2563EB);
+    --card-laranja: linear-gradient(135deg, #FBBF24, #F59E0B);
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-geral);
+    color: var(--texto-principal);
+}
+
+header{
+    background: var(--header);
+    color: #fff;
+    padding: 10px;
+}
+header h1{ margin-left: 40px; }
+
+main { display: flex; flex-direction: column; gap: 20px; padding: 40px; }
+
+/*------CARDS-----------------------------*/
+.totais{ display: flex; flex-direction: row; gap: 30px; align-items: center; justify-content: center; }
+
+.total-produtos, .valor-total, .categoria{ 
+    border-radius: 10px;
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+
+ }

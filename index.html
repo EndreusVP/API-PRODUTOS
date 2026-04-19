@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>API PRODUTOS</title>
+
+    <link rel="stylesheet" href="frontend/style.css">
 </head>
+
 <body>
-    <section class="totais">
-        <div class="total-produtos">
-            <h2>Total Produtos</h2>
-            <p id="totalProdutos"></p>
-        </div>
-        <div class="valor-total">
-            <h2>Valor Total</h2>
-            <p id="valorTotal"></p>
-        </div>
-        <div class="categoria">
-            <h2>Categorias</h2>
-            <p id="categorias"></p>
-        </div>
-    </section>
+    <header>
+        <h1>🛒 Gerenciador de Produtos</h1>
+    </header>
+    <main>
+        <section class="totais">
+            <div class="total-produtos">
+                <h2>Total Produtos</h2>
+                <p id="totalProdutos"></p>
+            </div>
+            <div class="valor-total">
+                <h2>Valor Total</h2>
+                <p id="valorTotal"></p>
+            </div>
+            <div class="categoria">
+                <h2>Categorias</h2>
+                <p id="categorias"></p>
+            </div>
+        </section>
 
-    <section class="novo-produto">
-        <h2>Novo Produto</h2>
-        <input type="text" id="nome" placeholder="Produto">
-        <input type="text" id="categoria" placeholder="Categoria">
-        <input type="number" id="preco" placeholder="Preço">
-        <button onclick="add()">add</button>
-    </section>
+        <section class="novo-produto">
+            <h2>Novo Produto</h2>
+            <input type="text" id="nome" placeholder="Produto">
+            <input type="text" id="categoria" placeholder="Categoria">
+            <input type="number" id="preco" placeholder="Preço">
+            <button onclick="add()">add</button>
+        </section>
 
-    <section class="filtros">
+        <section class="filtros">
 
-    </section>
+        </section>
 
-    <section class="lista-produtos">
-        <h2>Lista de Produtos</h2>
-        <ul id="lista"></ul>    
-    </section>
-    
+        <section class="lista-produtos">
+            <h2>Lista de Produtos</h2>
+            <ul id="lista"></ul>
+        </section>
+    </main>
     <script src="frontend/script.js"></script>
 </body>
+
 </html>
