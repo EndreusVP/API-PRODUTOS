@@ -67,5 +67,11 @@ main { display: flex; flex-direction: column; gap: 20px; padding: 40px; }
     color: #fff;
     padding: 30px;
     text-align: center;
-
+    width: 250px;
  }
+
+.total-produtos{ background: var(--card-verde); }
+.valor-total{ background: var(--card-azul); }
+.categoria{ background-color: var(--laranja-suave);}
+.tc { background: var(--card-laranja); border-top-left-radius: 10px; border-top-right-radius:10px;}
+
